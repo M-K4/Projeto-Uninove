@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" href="app.css" type="text/css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendasExpress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo"><a href="#">VendasExpress</a></div>
+        <ul>
+            <li><a href="#" onclick="showWindow('produtos')">Produtos</a></li>
+            <li><a href="#" onclick="showWindow('servicos')">Serviços</a></li>
+            <li><a href="#" onclick="showWindow('contato')">Contato</a></li>
+            <li><a href="#" onclick="showWindow('tecnologia')">Tecnologia</a></li>
+            <li><a href="#" onclick="showWindow('seguranca')">Segurança</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Janela Produtos -->
+<div id="produtos" class="window active">
+    <section class="section">
+        <div class="section-title">Produtos</div>
+        <div class="produtos-container">
+            <div class="produto">
+                <img src="https://via.placeholder.com/250" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do produto 1</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/250" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição do produto 2</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/250" alt="Produto 3">
+                <h3>Produto 3</h3>
+                <p>Descrição do produto 3</p>
+                <button class="adicionar">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Janela Serviços -->
+<div id="servicos" class="window">
+    <section class="section">
+        <div class="section-title">Serviços</div>
+        <p>Oferecemos uma ampla gama de serviços para atender às suas necessidades. Conheça todos abaixo:</p>
+        <div class="servicos-container">
+            <div class="servico">
+                <img src="https://via.placeholder.com/250" alt="Serviço 1">
+                <h3>Serviço 1</h3>
+                <p>Descrição do serviço 1.</p>
+            </div>
+            <div class="servico">
+                <img src="https://via.placeholder.com/250" alt="Serviço 2">
+                <h3>Serviço 2</h3>
+                <p>Descrição do serviço 2.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="servicos" class="window">
+    <div class="section-title">Serviços</div>
+    <p>Oferecemos uma ampla gama de serviços para atender às suas necessidades comerciais. Confira abaixo:</p>
+    <div class="servicos-container">
+        <div class="servico-item">
+            <h3>Consultoria de Vendas</h3>
+            <p>Ajudamos sua empresa a otimizar processos e aumentar as vendas com estratégias personalizadas.</p>
+        </div>
+        <div class="servico-item">
+            <h3>Gestão de Estoque</h3>
+            <p>Implementamos soluções inteligentes para controlar e otimizar o estoque de forma eficaz.</p>
+        </div>
+        <div class="servico-item">
+            <h3>Treinamento de Equipes</h3>
+            <p>Capacitação de equipes de vendas para melhorar desempenho e resultados.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Janela Contato -->
+<div id="contato" class="window">
+    <section class="section">
+        <div class="section-title">Fale Conosco</div>
+        <form id="formContato" onsubmit="return validarFormulario()">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</div>
+
+<!-- Janela Tecnologia -->
+<div id="tecnologia" class="window">
+    <section class="section">
+        <div class="section-title">Tecnologia</div>
+        <p>Nossa plataforma utiliza tecnologias de ponta para proporcionar uma experiência de compra otimizada.</p>
+        <div class="tecnologia-container">
+            <div class="tecnologia-item">
+                <img src="https://via.placeholder.com/250" alt="Tecnologia 1">
+                <h3>Personalização</h3>
+                <p>Algoritmos avançados que sugerem produtos com base nas preferências dos usuários.</p>
+            </div>
+            <div class="tecnologia-item">
+                <img src="https://via.placeholder.com/250" alt="Tecnologia 2">
+                <h3>Análise de Dados</h3>
+                <p>Usamos big data para monitorar e prever as demandas de produtos e otimizar nosso estoque.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Janela Segurança -->
+<div id="seguranca" class="window">
+    <section class="section">
+        <div class="section-title">Segurança</div>
+        <p>Valorizamos a privacidade e a segurança dos dados dos nossos clientes. Nossa plataforma adota as melhores práticas para garantir uma experiência segura.</p>
+        <div class="seguranca-container">
+            <div class="seguranca-item">
+                <img src="https://via.placeholder.com/250" alt="Segurança 1">
+                <h3>SSL Criptografia</h3>
+                <p>Todos os dados são protegidos com criptografia SSL, garantindo a segurança das transações.</p>
+            </div>
+            <div class="seguranca-item">
+                <img src="https://via.placeholder.com/250" alt="Segurança 2">
+                <h3>Política de Privacidade</h3>
+                <p>Temos uma política de privacidade rigorosa para proteger as informações dos nossos clientes.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
